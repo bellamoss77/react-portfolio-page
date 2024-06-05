@@ -1,15 +1,21 @@
 {
   "name": "portfolio-page",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "main": "index.js",
   "private": true,
   "homepage": "https://bellamoss77.github.io/react-portfolio-page",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "sass": "^1.77.4",
     "web-vitals": "^2.1.4"

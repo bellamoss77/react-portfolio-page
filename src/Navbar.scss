@@ -20,7 +20,7 @@ $coquetteFont: 'coquette', sans-serif;
     transition: $property;
     -webkit-transition: $property;
     -moz-transition: $property;
-    -ms-transition: $property
+    -ms-transition: $property;
 }
 
 * {
@@ -77,6 +77,14 @@ $coquetteFont: 'coquette', sans-serif;
             &.open .bar1 {
                 @include transform(rotate(-45deg) translate(-5px, 6px));
             }
+
+            &.open .bar2 {
+                opacity: 0;
+            }
+
+            &.open .bar3 {
+                @include transform(rotate(45deg) translate(-5px, -6px));
+            }
         }
     }
 
@@ -97,6 +105,28 @@ $coquetteFont: 'coquette', sans-serif;
                 a {
                     color: #fff;
                     text-decoration: none;
+                }
+                &.dropdown {
+                    position: relative;
+                    .dropdown-menu {
+                        display: none;
+                        position: absolute;
+                        background-color: #076c5c;
+                        top: 100%;
+                        left: 0;
+                        min-width: 200px;
+                        flex-direction: column;
+                        li {
+                            margin: 0;
+                            a {
+                                padding: 10px;
+                                display: block;
+                            }
+                        }
+                    }
+                    &.is-active {
+                        display: flex;
+                    }
                 }
             }
         }
@@ -119,9 +149,14 @@ $coquetteFont: 'coquette', sans-serif;
         left: 0;
         width: 100%;
         background-color: #076c5c;
-        &.is-active {
-            display: flex;
-        }
+    }
+
+    .navbar-menu.is-active {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column;
     }
 
     .navbar.scrolled {
