@@ -72,6 +72,7 @@
 .navbar .navbar-menu {
   display: flex;
   align-items: center;
+  margin-right: 40px;
 }
 .navbar .navbar-menu ul {
   list-style: none;
@@ -89,6 +90,7 @@
 }
 .navbar .navbar-menu ul li.dropdown {
   position: relative;
+  cursor: pointer;
 }
 .navbar .navbar-menu ul li.dropdown .dropdown-menu {
   display: none;
@@ -106,7 +108,7 @@
   padding: 10px;
   display: block;
 }
-.navbar .navbar-menu ul li.dropdown.is-active {
+.navbar .navbar-menu ul li.dropdown.is-active .dropdown-menu {
   display: flex;
 }
 .navbar .navbar-menu.is-active {
@@ -116,6 +118,7 @@
 @media (max-width: 768px) {
   .navbar-toggler {
     display: block;
+    cursor: pointer;
   }
   .navbar-menu {
     display: none;

@@ -29,8 +29,8 @@ const Navbar = () => {
   };
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen)
-  }
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -43,19 +43,19 @@ const Navbar = () => {
       </div>
       <div className={`navbar-menu ${isMenuOpen ? 'is-active' : ''}`}>
         <ul>
-        <li><Link to="/app" onClick={toggleMenu}>Home</Link></li>
-        <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
-        <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
-        <li className='dropdown'>
+          <li><Link to="/app" onClick={toggleMenu}>Home</Link></li>
+          <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
+          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+          <li className={`dropdown ${isDropdownOpen ? 'is-active' : ''}`}>
             <span onClick={toggleDropdown}>
-                Portfolios <FontAwesomeIcon icon={faAngleDown} />
+              Portfolios <FontAwesomeIcon icon={faAngleDown} />
             </span>
             <ul className={`dropdown-menu ${isDropdownOpen ? 'is-active' : ''}`}>
-                <li><Link to="/nature" onClick={toggleMenu}>Nature/Landscape</Link></li>
-                <li><Link to="/animal" onClick={toggleMenu}>Animal</Link></li>
-                <li><Link to="/ruins" onClick={toggleMenu}>Ruins</Link></li>
+              <li><Link to="/nature" onClick={toggleMenu}>Nature/Landscape</Link></li>
+              <li><Link to="/animal" onClick={toggleMenu}>Animal</Link></li>
+              <li><Link to="/ruins" onClick={toggleMenu}>Ruins</Link></li>
             </ul>
-        </li>
+          </li>
         </ul>
       </div>
     </nav>

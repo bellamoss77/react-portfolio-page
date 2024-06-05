@@ -44,7 +44,7 @@ $coquetteFont: 'coquette', sans-serif;
     .navbar-brand {
         display: flex;
         align-items: center;
-        
+
         .navbar-toggler {
             display: none;
             cursor: pointer;
@@ -91,6 +91,7 @@ $coquetteFont: 'coquette', sans-serif;
     .navbar-menu {
         display: flex;
         align-items: center;
+        margin-right: 40px;
 
         ul {
             list-style: none;
@@ -106,8 +107,11 @@ $coquetteFont: 'coquette', sans-serif;
                     color: #fff;
                     text-decoration: none;
                 }
+
                 &.dropdown {
                     position: relative;
+                    cursor: pointer;
+
                     .dropdown-menu {
                         display: none;
                         position: absolute;
@@ -116,20 +120,24 @@ $coquetteFont: 'coquette', sans-serif;
                         left: 0;
                         min-width: 200px;
                         flex-direction: column;
+
                         li {
                             margin: 0;
+
                             a {
                                 padding: 10px;
                                 display: block;
                             }
                         }
                     }
-                    &.is-active {
+
+                    &.is-active .dropdown-menu {
                         display: flex;
                     }
                 }
             }
         }
+
         &.is-active {
             display: block;
         }
@@ -139,6 +147,7 @@ $coquetteFont: 'coquette', sans-serif;
 @media (max-width: 768px) {
     .navbar-toggler {
         display: block;
+        cursor: pointer;
     }
 
     .navbar-menu {
